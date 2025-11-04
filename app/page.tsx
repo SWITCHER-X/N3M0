@@ -1,5 +1,6 @@
 import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
+import Navbar from "./Navbar";
 
 const Home = () => {
   return (
@@ -11,6 +12,11 @@ const Home = () => {
           backgroundSize: "40px 40px",
         }}
       ></div>
+
+      <div className="flex justify-center">
+        <Navbar />
+      </div>
+
       <main>
         <section>
           <header className="relative z-10 pt-24 sm:pt-28 md:pt-32 min-h-screen flex flex-col justify-center items-center px-4 sm:px-6 md:px-8">
@@ -30,7 +36,7 @@ const Home = () => {
               <div className="text-center mb-8 sm:mb-10 text-sm sm:text-base leading-relaxed text-gray-700">
                 <p>
                   Hi, my name is{" "}
-                  <span className="bg-foreground text-background px-2 py-1 inline-block rounded-2xl">
+                  <span className="bg-foreground text-sm text-background px-2 py-1 inline-block rounded-2xl">
                     Abba Is'haq
                   </span>{" "}
                   — I am a software developer, a true definition of a Philomath
@@ -44,7 +50,7 @@ const Home = () => {
                 <button className="px-6 sm:px-8 py-2 sm:py-3 bg-foreground text-background font-semibold text-xs sm:text-sm hover:bg-black/80 transition-colors rounded-3xl">
                   VIEW PROJECTS
                 </button>
-                <button className="px-6 sm:px-8 py-2 sm:py-3 bg-background text-foreground border-2 border-foreground font-semibold text-xs sm:text-sm hover:bg-background hover:text-white transition-colors rounded-3xl">
+                <button className="px-6 sm:px-8 py-2 sm:py-3 bg-background text-foreground border-2 border-foreground font-semibold text-xs sm:text-sm hover:bg-foreground hover:text-background transition-colors rounded-3xl">
                   DOWNLOAD CV
                 </button>
               </div>

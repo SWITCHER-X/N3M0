@@ -3,6 +3,7 @@ import Contact from "./_Contact";
 import Footer from "./Footer";
 import Hero from "./Hero";
 import Navbar from "./Navbar";
+import Projects from "./Projects";
 
 const Page = () => {
   return (
@@ -22,6 +23,7 @@ const Page = () => {
       <main>
         <Hero />
         <About />
+        <Projects />
         <Contact />
       </main>
       <Footer />

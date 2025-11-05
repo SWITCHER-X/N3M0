@@ -2,7 +2,16 @@ import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 
 const Hero = () => (
-  <section>
+  <section id="home" className="relative min-h-screen">
+    <div
+      className="absolute inset-0 pointer-events-none"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.08) 1px, transparent 1px)`,
+        // backgroundColor: "rgba(240, 240, 240, 0.8)",
+        backgroundSize: "50px 50px",
+        mixBlendMode: "multiply",
+      }}
+    ></div>
     <header className="relative z-10 pt-24 sm:pt-28 md:pt-32 min-h-screen flex flex-col justify-center items-center px-4 sm:px-6 md:px-8">
       <div className="font-mono max-w-2xl w-full">
         <h1 className="text-4xl text-foreground sm:text-5xl md:text-6xl lg:text-7xl font-black text-center mb-2 sm:mb-4">

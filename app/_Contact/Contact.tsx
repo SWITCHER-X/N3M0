@@ -28,7 +28,10 @@ const Contact = () => {
   ];
 
   return (
-    <section className="mx-auto max-w-7xl px-4 py-8 sm:px-8 sm:py-16">
+    <section
+      className="mx-auto max-w-7xl px-4 py-32 sm:px-8 sm:py-46"
+      id="contact"
+    >
       {/* Header */}
       <div className="mb-12 text-center sm:mb-16">
         <h1 className="mb-4 font-mono text-3xl font-bold sm:text-5xl">

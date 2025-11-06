@@ -20,7 +20,7 @@ const FormField = ({
   register,
 }: FieldProps) => (
   <div>
-    <label className="mb-2 block font-mono text-xs font-bold uppercase text-gray-700">
+    <label className="mb-2 block font-mono text-xs font-bold uppercase text-foreground/80">
       {label}
     </label>
     {textarea ? (
@@ -28,14 +28,14 @@ const FormField = ({
         {...register(name)}
         placeholder={placeholder}
         rows={4}
-        className="resize-none w-full border rounded-2xl border-gray-300 px-3 py-2 font-mono text-xs placeholder-gray-400 focus:border-gray-400 focus:outline-none sm:px-4 sm:py-2 sm:text-sm sm:rows-6"
+        className="resize-none w-full border rounded-2xl border-foreground/30 px-3 py-2 font-mono text-xs placeholder-foreground/60 focus:border-foreground/60 focus:outline-none sm:px-4 sm:py-2 sm:text-sm sm:rows-6"
       />
     ) : (
       <input
         {...register(name)}
         type={type}
         placeholder={placeholder}
-        className="w-full border rounded-xl border-gray-300 px-3 py-2 font-mono text-xs placeholder-gray-400 focus:border-gray-400 focus:outline-none sm:px-4 sm:py-2 sm:text-sm"
+        className="w-full border rounded-xl border-foreground/30 px-3 py-2 font-mono text-xs placeholder-foreground/60 focus:border-foreground/60 focus:outline-none sm:px-4 sm:py-2 sm:text-sm"
       />
     )}
   </div>

@@ -30,13 +30,16 @@ const About = () => {
   ];
 
   return (
-    <section className="max-w-7xl mx-auto px-4 py-32 lg:py-50 pb-8" id="about">
+    <section
+      className="max-w-7xl mx-auto px-4 py-32 lg:py-50 pb-8 font-mono"
+      id="about"
+    >
       <div className="text-center mb-12 md:mb-16">
-        <h1 className="font-mono text-3xl md:text-5xl font-bold tracking-wider mb-4">
+        <h1 className="text-3xl md:text-5xl font-bold tracking-wider mb-4">
           ABOUT
         </h1>
         <div className="w-16 md:w-24 h-1 bg-green-500 mx-auto mb-6 md:mb-8"></div>
-        <p className="font-mono text-xs md:text-sm leading-relaxed max-w-2xl mx-auto text-gray-700 px-2">
+        <p className="text-xs md:text-sm leading-relaxed max-w-2xl mx-auto text-foreground/70 px-2">
           I'm a passionate software developer with a love for creating digital
           experiences that matter. My journey in tech started with curiosity and
           has evolved into a commitment to building softwares and solutions that
@@ -52,12 +55,12 @@ const About = () => {
 
       <div className="bg-foreground text-background rounded-3xl p-4 md:p-6 max-w-2xl mx-auto">
         <p className="font-mono text-xs md:text-sm mb-3">
-          <span className="text-green-400">&gt;</span> CURRENT STATUS:{" "}
-          <span className="text-green-400 font-bold">
+          <span className="text-green-500">&gt;</span> CURRENT STATUS:{" "}
+          <span className="text-green-500 font-bold">
             AVAILABLE FOR PROJECTS
           </span>
         </p>
-        <p className="font-mono text-xs md:text-sm text-gray-300">
+        <p className="font-mono text-xs md:text-sm text-background/50">
           Ready to collaborate on your next big idea
         </p>
       </div>

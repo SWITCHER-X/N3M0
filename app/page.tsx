@@ -1,8 +1,8 @@
 import About from "./_About";
 import Contact from "./_Contact";
+import Navbar from "./_Navbar";
 import Footer from "./Footer";
 import Hero from "./Hero";
-import Navbar from "./Navbar";
 import Projects from "./Projects";
 
 const Page = () => {

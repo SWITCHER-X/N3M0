@@ -79,7 +79,7 @@ const ContactForm = () => {
 
       <button
         type="submit"
-        className="rounded-2xl flex w-full items-center justify-center gap-2 border border-gray-300 px-4 py-2 font-mono text-xs font-bold uppercase hover:bg-gray-50 sm:px-6 sm:py-3 sm:text-sm"
+        className="rounded-2xl flex w-full items-center justify-center gap-2 border border-gray-300 px-4 py-2 font-mono text-xs font-bold uppercase hover:bg-foreground/5 sm:px-6 sm:py-3 sm:text-sm cursor-pointer"
       >
         <Send className="h-4 w-4" />
         SEND MESSAGE

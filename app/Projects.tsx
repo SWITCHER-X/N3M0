@@ -45,11 +45,11 @@ const Projects = () => {
       className="font-mono max-w-7xl mx-auto text-center py-32 lg:py-46 px-4 md:px-8"
       id="projects"
     >
-      <h2 className="text-3xl md:text-5xl font-black tracking-wide mb-3">
+      <h2 className="text-3xl md:text-5xl font-bold tracking-wide mb-3">
         PROJECTS
       </h2>
-      <div className="w-16 md:w-24 h-1 bg-green-600 mx-auto mb-6 md:mb-8"></div>
-      <p className="text-gray-600 text-xs md:text-sm leading-relaxed max-w-2xl mx-auto px-2">
+      <div className="w-16 md:w-24 h-1 bg-green-500 mx-auto mb-6 md:mb-8"></div>
+      <p className="text-foreground/60 text-xs md:text-sm leading-relaxed max-w-2xl mx-auto px-2">
         A collection of projects showcasing different aspects of modern web
         development, from user interfaces to backend architecture.
       </p>
@@ -59,10 +59,10 @@ const Projects = () => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="border border-gray-300 overflow-hidden hover:shadow-lg transition rounded-3xl"
+              className="border border-foreground/30 overflow-hidden hover:shadow-lg transition rounded-3xl"
             >
               {/* Project Image Container */}
-              <div className="relative h-32 md:h-48 bg-gray-100 overflow-hidden group">
+              <div className="relative h-32 md:h-48 bg-foreground/10 overflow-hidden group">
                 <img
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
@@ -71,7 +71,9 @@ const Projects = () => {
                 {project.badge && (
                   <span
                     className={`absolute top-2 md:top-3 right-2 rounded-xl md:right-3 px-2 py-1 text-xs font-bold text-white ${
-                      project.badge === "BETA" ? "bg-blue-600" : "bg-gray-700"
+                      project.badge === "BETA"
+                        ? "bg-blue-600"
+                        : "bg-foreground/70"
                     }`}
                   >
                     {project.badge}
@@ -80,11 +82,11 @@ const Projects = () => {
               </div>
 
               {/* Project Content */}
-              <div className="p-4 md:p-6 bg-white">
+              <div className="p-4 md:p-6 bg-background">
                 <h3 className="font-bold text-base md:text-lg mb-2 md:mb-3 tracking-wide">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 text-xs leading-relaxed mb-3 md:mb-4">
+                <p className=" text-foreground/60 text-xs leading-relaxed mb-3 md:mb-4">
                   {project.description}
                 </p>
 
@@ -93,7 +95,7 @@ const Projects = () => {
                   {project.tech.map((tech, i) => (
                     <span
                       key={i}
-                      className="text-xs bg-gray-200 text-gray-800 px-2 py-1 font-semibold rounded-xl"
+                      className="text-xs bg-gray-200  text-gray-800 px-2 py-1 font-semibold rounded-xl"
                     >
                       {tech}
                     </span>
@@ -102,11 +104,11 @@ const Projects = () => {
 
                 {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
-                  <button className="flex-1 bg-black text-white rounded-3xl py-2 px-3 md:px-4 text-xs md:text-sm font-bold flex items-center justify-center gap-2 hover:bg-gray-900 transition">
+                  <button className="flex-1 bg-foreground text-background rounded-3xl py-2 px-3 md:px-4 text-xs md:text-sm font-bold flex items-center justify-center gap-2 hover:bg-foreground/90 hover:cursor-pointer transition">
                     <Code2 size={16} />
                     CODE
                   </button>
-                  <button className="flex-1 border border-gray-300 text-black rounded-3xl py-2 px-3 md:px-4 text-xs md:text-sm font-bold flex items-center justify-center gap-2 hover:bg-gray-50 transition">
+                  <button className="flex-1 border border-gray-300 text-foreground rounded-3xl py-2 px-3 md:px-4 text-xs md:text-sm font-bold flex items-center justify-center gap-2 hover:bg-background/50 transition">
                     <ExternalLink size={16} />
                     DEMO
                   </button>

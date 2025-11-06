@@ -1,6 +1,7 @@
+"use client";
+import { useForm } from "react-hook-form";
 import z from "zod";
 import formSchema from "./formSchema";
-import { useForm } from "react-hook-form";
 
 interface FieldProps {
   label: string;

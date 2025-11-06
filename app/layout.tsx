@@ -1,6 +1,7 @@
 import { ThemeProvider } from "@/lib/theme-provider";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Toaster } from "sonner";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -28,7 +29,21 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased scroll-smooth`}
       >
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          {children}
+          <Toaster
+            richColors
+            position="bottom-right"
+            toastOptions={{
+              classNames: {
+                toast:
+                  "rounded-2xl shadow-md border text-sm font-mono bg-background",
+                success: "bg-green-100 border-green-500 text-green-800",
+                error: "bg-red-100 border-red-500 text-red-800",
+              },
+            }}
+          />
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -1,12 +1,17 @@
 "use client";
+import sendMail from "@/actions/sendMail";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Send } from "lucide-react";
+import { useTransition } from "react";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 import z from "zod";
-import formSchema from "./formSchema";
 import FormField from "./FormField";
+import formSchema from "./formSchema";
+import LoadingSpinner from "./LoadingSpinner";
 
 const ContactForm = () => {
+  const [isPending, startTransition] = useTransition();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -19,31 +24,16 @@ const ContactForm = () => {
 
   const { register, handleSubmit } = form;
 
-  const onSubmit = () => {
-    console.log("Form submitted");
+  const onSubmit = (userMessage: z.infer<typeof formSchema>) => {
+    startTransition(async () => {
+      const { success } = await sendMail(userMessage);
+      if (success) {
+        toast.success("Message sent");
+      } else {
+        toast.error("Unable to send message");
+      }
+    });
   };
-
-  //   const fields = [
-  //     { label: "NAME", name: "name", type: "text", placeholder: "Your name" },
-  //     {
-  //       label: "EMAIL",
-  //       name: "email",
-  //       type: "email",
-  //       placeholder: "your@email.com",
-  //     },
-  //     {
-  //       label: "SUBJECT",
-  //       name: "subject",
-  //       type: "text",
-  //       placeholder: "Project inquiry",
-  //     },
-  //     {
-  //       label: "MESSAGE",
-  //       name: "message",
-  //       textarea: true,
-  //       placeholder: "Tell me about your project...",
-  //     },
-  //   ] as const;
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6">
@@ -79,10 +69,17 @@ const ContactForm = () => {
 
       <button
         type="submit"
+        disabled={isPending}
         className="rounded-2xl flex w-full items-center justify-center gap-2 border border-gray-300 px-4 py-2 font-mono text-xs font-bold uppercase hover:bg-foreground/5 sm:px-6 sm:py-3 sm:text-sm cursor-pointer"
       >
-        <Send className="h-4 w-4" />
-        SEND MESSAGE
+        {isPending ? (
+          <LoadingSpinner />
+        ) : (
+          <>
+            <Send className="h-4 w-4" />
+            SEND MESSAGE
+          </>
+        )}
       </button>
     </form>
   );

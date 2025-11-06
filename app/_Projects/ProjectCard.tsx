@@ -88,7 +88,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
 
           {/* Video Demo */}
           {project.videoDemo && (
-            <div className="w-full aspect-video rounded-lg overflow-hidden mb-6">
+            <div className="w-full aspect-video rounded-2xl overflow-hidden mb-6">
               <iframe
                 width="100%"
                 height="100%"

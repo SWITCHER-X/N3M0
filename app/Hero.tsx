@@ -50,10 +50,10 @@ const Hero = () => (
         </div>
 
         <div className="flex justify-center gap-3 sm:gap-4 mb-10 sm:mb-12">
-          <button className="px-6 sm:px-8 py-2 sm:py-3 bg-foreground text-background font-semibold text-xs sm:text-sm hover:bg-foreground/70 hover:cursor-pointer transition-colors rounded-3xl">
+          <button className="px-6 sm:px-8 py-2 sm:py-3 bg-foreground text-background font-semibold text-xs sm:text-sm hover:bg-foreground/70 hover:cursor-pointer transition-colors duration-150 rounded-3xl">
             VIEW PROJECTS
           </button>
-          <button className="px-6 sm:px-8 py-2 sm:py-3 bg-background text-foreground border-2 border-foreground font-semibold text-xs sm:text-sm hover:bg-foreground hover:cursor-pointer hover:text-background transition-colors rounded-3xl">
+          <button className="px-6 sm:px-8 py-2 sm:py-3 bg-background text-foreground border-2 border-foreground font-semibold text-xs sm:text-sm hover:bg-foreground hover:cursor-pointer hover:text-background transition-colors duration-150 rounded-3xl">
             DOWNLOAD CV
           </button>
         </div>
@@ -63,7 +63,7 @@ const Hero = () => (
             <Link
               key={i}
               href={url}
-              className="p-2 sm:p-3 border-2 rounded-full border-foreground/20 hover:border-foreground transition-colors hover:bg-foreground hover:text-background"
+              className="p-2 sm:p-3 border-2 rounded-full border-foreground/20 hover:border-foreground transition-colors duration-150 hover:bg-foreground hover:text-background"
               aria-label={label}
             >
               <Icon size={18} className="sm:block" />
@@ -72,9 +72,7 @@ const Hero = () => (
         </div>
       </div>
 
-      <div className="font-mono absolute bottom-18 md:bottom-24 lg:bottom-28 text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-foreground/40 tracking-[0.5rem] md:tracking-[1rem] lg:tracking-[3rem] pointer-events-none select-none opacity-40">
-        ABBA IS'HAQ
-      </div>
+      <div className="absolute bottom-18 md:bottom-24 lg:bottom-28 text-foreground/40 pointer-events-none select-none opacity-40"></div>
 
       {/* Scroll Down Arrow */}
       <div className="absolute bottom-6 sm:bottom-8 animate-bounce">

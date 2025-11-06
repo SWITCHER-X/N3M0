@@ -22,9 +22,21 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    { icon: Github, label: "GITHUB", url: "#" },
-    { icon: Linkedin, label: "LINKEDIN", url: "#" },
-    { icon: Twitter, label: "TWITTER", url: "#" },
+    {
+      icon: Github,
+      label: "Github",
+      url: "https://github.com/absterr",
+    },
+    {
+      icon: Linkedin,
+      label: "LinkedIn",
+      url: "https://linkedin.com/in/abba-is-haq-b14579321",
+    },
+    {
+      icon: Twitter,
+      label: "X",
+      url: "https://x.com/_absterr",
+    },
   ];
 
   return (
@@ -32,20 +44,17 @@ const Contact = () => {
       className="mx-auto max-w-7xl px-4 py-32 sm:px-8 sm:py-46"
       id="contact"
     >
-      {/* Header */}
       <div className="mb-12 text-center sm:mb-16">
         <h1 className="mb-4 font-mono text-3xl font-bold sm:text-5xl">
           CONTACT
         </h1>
         <div className="w-16 md:w-24 h-1 bg-green-500 mx-auto mb-6 md:mb-8"></div>
         <p className="mx-auto max-w-2xl font-mono text-xs text-foreground/60 sm:text-sm">
-          Ready to collaborate on your next project? Let's connect and build
-          something amazing together.
+          Got an idea in mind? Let's collaborate and build something remarkable.
         </p>
       </div>
 
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-10 items-stretch">
-        {/* Contact Form */}
         <div className="border border-foreground/30 p-6 sm:p-8 rounded-3xl">
           <h2 className="mb-6 font-mono text-base font-bold sm:mb-8 sm:text-lg">
             SEND A MESSAGE
@@ -53,9 +62,7 @@ const Contact = () => {
           <ContactForm />
         </div>
 
-        {/* Contact Info + Social Links */}
         <div className="flex flex-col justify-between h-full space-y-6 sm:space-y-8">
-          {/* Get In Touch */}
           <div>
             <h2 className="mb-4 font-mono text-base font-bold sm:mb-6 sm:text-lg">
               GET IN TOUCH
@@ -80,7 +87,6 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Social Links */}
           <div>
             <h2 className="mb-4 font-mono text-base font-bold sm:mb-6 sm:text-lg">
               SOCIAL LINKS

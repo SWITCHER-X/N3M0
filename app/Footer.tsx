@@ -10,9 +10,13 @@ const quickLinks = [
 ];
 
 const socialLinks = [
-  { icon: Github, label: "GITHUB", url: "#" },
-  { icon: Linkedin, label: "LINKEDIN", url: "#" },
-  { icon: Twitter, label: "TWITTER", url: "#" },
+  { icon: Github, label: "Github", url: "https://github.com/absterr" },
+  {
+    icon: Linkedin,
+    label: "LinkedIn",
+    url: "https://linkedin.com/in/abba-is-haq-b14579321",
+  },
+  { icon: Twitter, label: "𝕏", url: "https://x.com/_absterr" },
 ];
 
 const Footer = () => {
@@ -34,8 +38,7 @@ const Footer = () => {
                 ABSTERR.DEV
               </h3>
               <p className="text-sm text-gray-400 leading-relaxed">
-                Full-stack developer passionate about creating digital
-                experiences that bridge creativity and functionality.
+                Dedicated to building projects that engage and inspire.
               </p>
             </div>
 
@@ -63,11 +66,12 @@ const Footer = () => {
                 CONNECT
               </h3>
               <div className="flex gap-3 mb-4">
-                {socialLinks.map(({ url, icon: Icon }, i) => (
+                {socialLinks.map(({ url, label, icon: Icon }, i) => (
                   <Link
                     key={i}
                     href={url}
                     className="border border-gray-500 p-3 rounded-full hover:border-white transition"
+                    aria-label={label}
                   >
                     <span className="text-sm text-gray-400">
                       <Icon />

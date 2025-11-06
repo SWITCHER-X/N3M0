@@ -50,8 +50,8 @@ const Projects = () => {
       </h2>
       <div className="w-16 md:w-24 h-1 bg-green-500 mx-auto mb-6 md:mb-8"></div>
       <p className="text-foreground/60 text-xs md:text-sm leading-relaxed max-w-2xl mx-auto px-2">
-        A collection of projects showcasing different aspects of modern web
-        development, from user interfaces to backend architecture.
+        A collection of my projects showcasing different aspects of modern
+        software development, from user interfaces to backend architecture.
       </p>
 
       <div className="py-6 md:py-12 px-4 md:px-8">

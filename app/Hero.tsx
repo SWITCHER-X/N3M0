@@ -2,9 +2,13 @@ import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 
 const socials = [
-  { href: "#", icon: Github },
-  { href: "#", icon: Linkedin },
-  { href: "#", icon: Mail },
+  { url: "https://github.com/absterr", label: "Github", icon: Github },
+  {
+    url: "https://linkedin.com/in/abba-is-haq-b14579321",
+    label: "LinkedIn",
+    icon: Linkedin,
+  },
+  { url: "mailto:absterr.dev@gmail.com", label: "Mail", icon: Mail },
 ];
 
 const Hero = () => (
@@ -37,10 +41,11 @@ const Hero = () => (
             <span className="bg-foreground text-sm text-background px-2 py-1 inline-block rounded-2xl">
               Abba Is'haq
             </span>{" "}
-            — I am a software developer, a true definition of a Philomath and a
-            Tech addict. I strive to bring innovative ideas to life. My goal is
-            to craft seamless digital experiences that not only meet but exceed
-            client expectations.
+            — I am a software developer who loves turning ideas into real,
+            working products. Driven by dedication and a passion for innovation,
+            I&apos;m constantly exploring, experimenting, and pushing myself to
+            build things that don&apos;t just work, but feel intuitive and make
+            a lasting impression.
           </p>
         </div>
 
@@ -54,11 +59,12 @@ const Hero = () => (
         </div>
 
         <div className="flex justify-center gap-4 sm:gap-6 mb-12 sm:mb-16">
-          {socials.map(({ href, icon: Icon }, i) => (
+          {socials.map(({ url, label, icon: Icon }, i) => (
             <Link
               key={i}
-              href={href}
+              href={url}
               className="p-2 sm:p-3 border-2 rounded-full border-foreground/20 hover:border-foreground transition-colors hover:bg-foreground hover:text-background"
+              aria-label={label}
             >
               <Icon size={18} className="sm:block" />
             </Link>
@@ -66,7 +72,7 @@ const Hero = () => (
         </div>
       </div>
 
-      <div className="font-mono absolute bottom-18 md:bottom-24 lg:bottom-28 text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-gray-300 tracking-[0.5rem] md:tracking-[1rem] lg:tracking-[3rem] pointer-events-none select-none opacity-40">
+      <div className="font-mono absolute bottom-18 md:bottom-24 lg:bottom-28 text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-foreground/40 tracking-[0.5rem] md:tracking-[1rem] lg:tracking-[3rem] pointer-events-none select-none opacity-40">
         ABBA IS'HAQ
       </div>
 

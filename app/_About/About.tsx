@@ -40,10 +40,10 @@ const About = () => {
         </h1>
         <div className="w-16 md:w-24 h-1 bg-green-500 mx-auto mb-6 md:mb-8"></div>
         <p className="text-xs md:text-sm leading-relaxed max-w-2xl mx-auto text-foreground/70 px-2">
-          I'm a passionate software developer with a love for creating digital
-          experiences that matter. My journey in tech started with curiosity and
-          has evolved into a commitment to building softwares and solutions that
-          bridge creativity and functionality.
+          I&apos;m a software developer who loves bringing ideas to life through
+          thoughtful, purposeful work. What started as curiosity has grown into
+          a passion and dedication to creating experiences that feel intuitive,
+          meaningful, crafted with intention every step of the way.
         </p>
       </div>
 

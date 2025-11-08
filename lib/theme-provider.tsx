@@ -34,6 +34,9 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
         : "light";
     }
 
+    // Add transition class for smooth theme changes
+    root.style.transition = "background-color 0.3s ease, color 0.3s ease";
+    
     if (effectiveTheme === "dark") {
       root.classList.add("dark");
     } else {
@@ -41,6 +44,11 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     }
 
     localStorage.setItem("theme", theme);
+    
+    // Remove transition after theme is applied to avoid affecting other animations
+    setTimeout(() => {
+      root.style.transition = "";
+    }, 300);
   }, [theme, mounted]);
 
   useEffect(() => {

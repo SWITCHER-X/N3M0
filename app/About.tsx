@@ -1,6 +1,44 @@
+"use client";
 import { Shield, Code2, Network, Users } from "lucide-react";
+import { useEffect, useState, useRef } from "react";
 
 const About = () => {
+  const statusRef = useRef<HTMLSpanElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (statusRef.current) {
+      const interval = setInterval(() => {
+        statusRef.current?.classList.toggle("status-flicker");
+        setTimeout(() => {
+          statusRef.current?.classList.toggle("status-flicker");
+        }, 150);
+      }, 3000);
+
+      return () => clearInterval(interval);
+    }
+  }, []);
+
   const skills = [
     {
       icon: Shield,
@@ -30,10 +68,11 @@ const About = () => {
 
   return (
     <section
-      className="max-w-7xl mx-auto px-4 py-32 lg:py-50 pb-8 font-mono"
+      ref={sectionRef}
+      className={`max-w-7xl mx-auto px-4 py-16 lg:py-20 pb-8 font-mono fade-in-up ${isVisible ? "visible" : ""}`}
       id="about"
     >
-      <div className="text-center mb-12 md:mb-16">
+      <div className="text-center mb-8 md:mb-10">
         <h1 className="text-3xl md:text-5xl font-bold tracking-wider mb-4">
           ABOUT
         </h1>
@@ -48,20 +87,20 @@ const About = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-12 md:mb-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-4 md:gap-6 mb-8 md:mb-10">
         {skills.map(({ icon: Icon, title, description, tech }, i) => (
           <div
-            className="border border-foreground/30 p-4 md:p-6 text-center rounded-3xl"
+            className="border border-foreground/30 p-4 sm:p-5 md:p-6 text-center rounded-3xl"
             key={i}
           >
-            <div className="text-2xl md:text-3xl font-mono mb-3 text-foreground/80 flex justify-center">
-              <Icon />
+            <div className="text-xl sm:text-2xl md:text-3xl font-mono mb-3 text-foreground/80 flex justify-center">
+              <Icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
             </div>
-            <h3 className="font-bold text-xs md:text-sm mb-2 tracking-wider">
+            <h3 className="font-bold text-xs sm:text-xs md:text-sm mb-2 tracking-wider">
               {title}
             </h3>
-            <p className="text-xs text-foreground/60 mb-3">{tech}</p>
-            <p className="text-xs text-foreground/60 leading-relaxed">
+            <p className="text-xs sm:text-xs text-foreground/60 mb-3 leading-relaxed">{tech}</p>
+            <p className="text-xs sm:text-xs text-foreground/60 leading-relaxed">
               {description}
             </p>
           </div>
@@ -71,7 +110,7 @@ const About = () => {
       <div className="bg-foreground text-background rounded-3xl p-4 md:p-6 max-w-2xl mx-auto">
         <p className="font-mono text-xs md:text-sm mb-3">
           <span className="text-green-500">&gt;</span> CURRENT STATUS:{" "}
-          <span className="text-green-500 font-bold">
+          <span ref={statusRef} className="text-green-500 font-bold status-pulse" aria-label="Current status: Resting">
             RESTING
           </span>
         </p>

@@ -1,21 +1,9 @@
-import { Github, Linkedin, Twitter } from "lucide-react";
-
 const quickLinks = [
   { href: "#home", label: "HOME" },
   { href: "#about", label: "ABOUT" },
-  { href: "#experience", label: "EXPERIENCE" },
+  { href: "/timeline", label: "EXPERIENCE" },
   { href: "#projects", label: "PROJECTS" },
   { href: "#contact", label: "CONTACT" },
-];
-
-const socialLinks = [
-  { icon: Github, label: "Github", url: "https://github.com/bosco" },
-  {
-    icon: Linkedin,
-    label: "LinkedIn",
-    url: "https://linkedin.com/in/abba-is-haq-b14579321",
-  },
-  { icon: Twitter, label: "𝕏", url: "https://x.com/_bosco" },
 ];
 
 const Footer = () => {
@@ -29,8 +17,8 @@ const Footer = () => {
         }}
       ></div>
       <div className="bg-black text-white border-t border-gray-700">
-        <div className="max-w-7xl mx-auto px-8 py-16">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 pb-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-14 md:py-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 pb-8 sm:pb-10 md:pb-12">
             {/* About */}
             <div>
               <h3 className="font-bold text-lg pb-4 tracking-wide">
@@ -51,7 +39,8 @@ const Footer = () => {
                   <a
                     key={label}
                     href={href}
-                    className="text-gray-400 hover:text-white transition block"
+                    className="text-gray-400 hover:text-white transition block focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black rounded"
+                    aria-label={`Navigate to ${label}`}
                   >
                     {label}
                   </a>
@@ -59,43 +48,25 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Connect */}
-            <div>
-              <h3 className="font-semibold text-xs tracking-widest mb-4 text-gray-300">
-                CONNECT
-              </h3>
-              <div className="flex gap-3 mb-4">
-                {socialLinks.map(({ url, label, icon: Icon }, i) => (
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    key={i}
-                    href={url}
-                    className="border border-gray-500 p-3 rounded-full hover:border-white transition"
-                    aria-label={label}
-                  >
-                    <span className="text-sm text-gray-400">
-                      <Icon />
-                    </span>
-                  </a>
-                ))}
-              </div>
-              <p className="text-sm text-gray-400">bosco.dev@gmail.com</p>
-            </div>
           </div>
 
-          <div className="border-t border-gray-700 pt-8 flex justify-between items-center">
-            <p className="text-xs text-gray-500">
+          <div className="border-t border-gray-700 pt-6 sm:pt-8">
+            <p className="text-xs text-gray-500 text-center sm:text-left mb-2">
               © 2025 BOSCO.DEV - ALL RIGHTS RESERVED
             </p>
-            <div className="pl-1">
+            <p className="text-xs text-gray-500 text-center sm:text-left">
+              I was too lazy to build this or create a CV for years. <br /> Site template made by{" "}
               <a
-                href="#home"
-                className="border border-gray-500 p-2.5  hover:border-white transition rounded-full"
+                href="http://absterr.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition underline"
+                aria-label="Visit Absterr's portfolio"
               >
-                <span className="text-white">↑</span>
+                Absterr
               </a>
-            </div>
+              .
+            </p>
           </div>
         </div>
       </div>

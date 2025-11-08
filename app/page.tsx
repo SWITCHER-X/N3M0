@@ -4,6 +4,7 @@ import Navbar from "./_Navbar";
 import Footer from "./Footer";
 import Hero from "./Hero";
 import Projects from "./_Projects";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 const Page = () => {
   return (
@@ -19,6 +20,7 @@ const Page = () => {
         <Contact />
       </main>
       <Footer />
+      <ScrollToTop />
     </>
   );
 };

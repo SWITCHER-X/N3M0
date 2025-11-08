@@ -16,14 +16,47 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Clinton Omotoiynbo | Cybersecurity Specialist & Tech Enthusiast",
-  description: "Cybersecurity specialist, OSINT expert, and full-stack developer. Specializing in SOC operations, pentesting, network security, and building secure applications. Available for projects.",
-  keywords: ["cybersecurity", "OSINT", "pentesting", "network security", "web development", "React", "Python", "Flutter", "NOC", "information security"],
-  authors: [{ name: "Clinton Omotoiynbo" }],
-  creator: "Clinton Omotoiynbo",
+  title: "Bosco | Cybersecurity Specialist & Tech Enthusiast",
+  description: "Bosco (Bosco404, Error404, Clinton Omotoyinbo) - Cybersecurity specialist, OSINT expert, and full-stack developer. Specializing in SOC operations, pentesting, network security, and building secure applications. Available for projects.",
+  keywords: [
+    "Bosco",
+    "Bosco404",
+    "bosco404",
+    "Error404",
+    "error404",
+    "Clinton Omotoyinbo",
+    "Clinton Omotoiynbo",
+    "cybersecurity specialist",
+    "OSINT expert",
+    "pentesting",
+    "network security",
+    "web development",
+    "React developer",
+    "Python developer",
+    "Flutter developer",
+    "NOC engineer",
+    "information security",
+    "SOC operations",
+    "security operations center",
+    "ethical hacking",
+    "cyber security",
+    "information security analyst",
+    "network security engineer",
+    "full stack developer",
+    "bosco dev",
+    "bosco.dev",
+    "3rr0r_404exe",
+    "bosco404exe",
+  ],
+  authors: [{ name: "Clinton Omotoyinbo", url: "https://bosco.dev" }],
+  creator: "Clinton Omotoyinbo",
+  publisher: "Bosco",
+  alternates: {
+    canonical: "https://bosco.dev",
+  },
   openGraph: {
-    title: "Clinton Omotoiynbo | Cybersecurity Specialist & Tech Enthusiast",
-    description: "Cybersecurity specialist, OSINT expert, and full-stack developer. Specializing in SOC operations, pentesting, network security, and building secure applications.",
+    title: "Bosco | Cybersecurity Specialist & Tech Enthusiast",
+    description: "Bosco (Bosco404, Error404, Clinton Omotoyinbo) - Cybersecurity specialist, OSINT expert, and full-stack developer. Specializing in SOC operations, pentesting, network security, and building secure applications.",
     url: "https://bosco.dev",
     siteName: "BOSCO.DEV",
     locale: "en_US",
@@ -33,20 +66,32 @@ export const metadata: Metadata = {
         url: "https://bosco.dev/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Clinton Omotoiynbo - Cybersecurity Specialist",
+        alt: "Bosco - Cybersecurity Specialist & Tech Enthusiast",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Clinton Omotoiynbo | Cybersecurity Specialist",
-    description: "Cybersecurity specialist, OSINT expert, and full-stack developer.",
+    title: "Bosco | Cybersecurity Specialist & Tech Enthusiast",
+    description: "Bosco (Bosco404, Error404, Clinton Omotoyinbo) - Cybersecurity specialist, OSINT expert, and full-stack developer.",
     creator: "@3rr0r_404exe",
+    site: "@3rr0r_404exe",
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
+  verification: {
+    google: undefined, // Add Google Search Console verification code if available
+  },
+  category: "Technology",
 };
 
 export const viewport: Viewport = {
@@ -64,15 +109,18 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Clinton Omotoiynbo",
+    name: "Clinton Omotoyinbo",
+    alternateName: ["Bosco", "Bosco404", "Error404", "bosco404", "error404", "3rr0r_404exe"],
     jobTitle: "Cybersecurity Specialist & Tech Enthusiast",
-    description: "Cybersecurity specialist, OSINT expert, and full-stack developer specializing in SOC operations, pentesting, and network security.",
+    description: "Bosco (Bosco404, Error404, Clinton Omotoyinbo) - Cybersecurity specialist, OSINT expert, and full-stack developer specializing in SOC operations, pentesting, and network security.",
     url: "https://bosco.dev",
     sameAs: [
       "https://github.com/bosco404exe",
       "https://x.com/3rr0r_404exe",
+      "https://linkedin.com/in/clinton-omotoiynbo",
     ],
     email: "omotoyinbokryptonclinton@gmail.com",
+    telephone: "+2348109137660",
     address: {
       "@type": "PostalAddress",
       addressLocality: "localhost:404",
@@ -89,7 +137,19 @@ export default function RootLayout({
       "Python",
       "React",
       "Flutter",
+      "Ethical Hacking",
+      "Information Security",
+      "Network Security Engineering",
+      "Security Operations Center",
     ],
+    alumniOf: {
+      "@type": "Organization",
+      name: "Verse Telecoms",
+    },
+    worksFor: {
+      "@type": "Organization",
+      name: "Freelance",
+    },
   };
 
   return (

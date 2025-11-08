@@ -121,8 +121,7 @@ const Hero = () => {
             they can be broken. Whether it&apos;s securing networks, developing
             applications, or leading projects, I approach every challenge with
             the mindset of someone who loves to create solutions and understand
-            their vulnerabilities—because that&apos;s what got me into tech in
-            the first place.
+            their vulnerabilities—because that&apos;s me.
           </p>
         </div>
 

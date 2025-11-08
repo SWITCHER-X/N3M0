@@ -56,7 +56,7 @@ const Projects = () => {
         </p>
         <p className="text-foreground/60 text-xs md:text-sm leading-relaxed max-w-2xl mx-auto px-2 mb-6 md:mb-8">
           A collection of my projects showcasing different aspects of modern
-          software development, from user interfa---- If you made it here, you&apos;re just looking for confirmation bias—and that&apos;s okay. You already know what i can do so why are you checking?
+          software development, from user interfa---- If you made it here, you&apos;re just looking for confirmation bias and that&apos;s okay. You already know what i can do so why are you checking?
         </p>
 
         <div className="py-4 md:py-6 px-4 md:px-8">
@@ -71,7 +71,7 @@ const Projects = () => {
                 Really? You&apos;re still checking? You didn&apos;t end up here by accident… or did you?
               </p>
               <p className="leading-relaxed">
-                You must be here for a reason. I&apos;d love to know what it is. There are various ways to contact me below. I&apos;d love to hear from you. Welcome. Whether by choice or misclick? Don&apos;t worry, The algorithm works in mysterious ways.
+                You must be here for a reason. I&apos;d love to know what it is. There are various ways to contact me below. I&apos;d love to hear from you. Whether by choice or misclick? Don&apos;t worry, The algorithm works in mysterious ways.
               </p>
               <p className="text-xs text-foreground/50 mt-3 sm:mt-4">
                 💡 Tip: Press ` (backtick) to open terminal

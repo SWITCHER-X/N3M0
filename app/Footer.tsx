@@ -25,7 +25,7 @@ const Footer = () => {
                 BOSCO.DEV
               </h3>
               <p className="text-sm text-gray-400 leading-relaxed">
-                Dedicated to building projects that engage and inspire.
+                Building things. Breaking things. Fixing things. Repeat.
               </p>
             </div>
 

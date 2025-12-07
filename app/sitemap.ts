@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://bosco.dev";
+  const baseUrl = "https://switcher.dev";
 
   return [
     {

@@ -32,13 +32,13 @@ const Contact = () => {
     {
       icon: Mail,
       label: "EMAIL",
-      value: "omotoyinbokryptonclinton@gmail.com",
+      value: "bigkingayuba@gmail.com",
       copyable: true,
     },
     {
       icon: Phone,
       label: "PHONE",
-      value: "+ 234 (0) 810 913 7660",
+      value: "+ 234 (0) 902 934 7885",
       copyable: true,
     },
     {
@@ -63,15 +63,10 @@ const Contact = () => {
   };
 
   const socialLinks = [
-    { icon: Github, label: "Github", url: "https://github.com/bosco404exe" },
-    {
-      icon: Linkedin,
-      label: "LinkedIn",
-      url: "https://linkedin.com/in/clinton-omotoiynbo",
-    },
-    { icon: Mail, label: "Mail", url: "mailto:omotoyinbokryptonclinton@gmail.com" },
-    { icon: XIcon, label: "X", url: "https://x.com/3rr0r_404exe" },
-    { icon: WhatsAppIcon, label: "WhatsApp", url: "http://wa.me/2348109137660" },
+    { icon: Github, label: "Github", url: "https://github.com/SWITCHER-X" },
+    { icon: Mail, label: "Mail", url: "mailto:bigkingayuba@gmail.com" },
+    { icon: XIcon, label: "X", url: "https://x.com/switcher_x_" },
+    { icon: WhatsAppIcon, label: "WhatsApp", url: "http://wa.me/2349029347885" },
   ];
 
   return (

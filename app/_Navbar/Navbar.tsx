@@ -9,7 +9,7 @@ const Navbar = () => {
   const router = useRouter();
   const [active, setActive] = useState("home");
   const [isOpen, setOpen] = useState(false);
-  const [scrambledText, setScrambledText] = useState("BOSCO.DEV");
+  const [scrambledText, setScrambledText] = useState("SWITCHER.DEV");
 
   const navItems = ["About", "Projects", "Contact"];
 
@@ -73,7 +73,7 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    const originalText = "BOSCO.DEV";
+    const originalText = "SWITCHER.DEV";
     const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789./";
     
     // Check if device is mobile to reduce animation frequency
@@ -110,7 +110,7 @@ const Navbar = () => {
             <button
               className="text-xs sm:text-sm md:text-base lg:text-lg text-foreground hover:cursor-pointer transition-all font-mono truncate"
               onClick={handleHomeClick}
-              aria-label="Home - BOSCO.DEV"
+              aria-label="Home - SWITCHER.DEV"
             >
               <span className="scramble-text">{scrambledText}</span>
             </button>

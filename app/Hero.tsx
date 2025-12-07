@@ -6,16 +6,10 @@ import { XIcon } from "@/components/XIcon";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 
 const socials = [
-  { url: "https://github.com/bosco404exe", label: "Github", icon: Github },
-  {
-    url: "https://linkedin.com/in/clinton-omotoiynbo",
-    label: "LinkedIn",
-    icon: Linkedin,
-    animate: true,
-  },
-  { url: "mailto:omotoyinbokryptonclinton@gmail.com", label: "Mail", icon: Mail },
-  { url: "https://x.com/3rr0r_404exe", label: "X", icon: XIcon },
-  { url: "http://wa.me/2348109137660", label: "WhatsApp", icon: WhatsAppIcon },
+  { url: "https://github.com/SWITCHER-X", label: "Github", icon: Github },
+  { url: "mailto:bigkingayuba@gmail", label: "Mail", icon: Mail },
+  { url: "https://x.com/switcher_x_", label: "X", icon: XIcon },
+  { url: "http://wa.me/2349029347885", label: "WhatsApp", icon: WhatsAppIcon },
 ];
 
 const Hero = () => {
@@ -90,7 +84,7 @@ const Hero = () => {
     <header className="relative z-10 pt-20 sm:pt-24 md:pt-28 lg:pt-32 min-h-screen flex flex-col justify-center items-center px-4 sm:px-6 md:px-8">
       <div className="font-mono max-w-2xl w-full">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-foreground font-black text-center mb-2 sm:mb-4">
-          BOSCO.DEV
+          SWITCHER.DEV
         </h1>
 
         <div className="flex justify-center mb-6 sm:mb-8">
@@ -112,7 +106,7 @@ const Hero = () => {
           <p>
             Hi, my name is{" "}
             <span className="bg-foreground text-xs sm:text-sm text-background px-2 py-1 inline-block rounded-2xl">
-              Clinton Omotoiynbo
+              Medugu Ayuba
             </span>{" "}
             — I am a cybersecurity specialist and tech enthusiast who thrives on
             the dual nature of creation and deconstruction. Driven by an insatiable

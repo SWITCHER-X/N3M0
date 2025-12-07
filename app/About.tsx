@@ -43,20 +43,20 @@ const About = () => {
     {
       icon: Shield,
       title: "CYBERSECURITY",
-      tech: "OSINT, SOC, Pentesting, Network Security, Info Sec",
+      tech: "OSINT, Offsec, Pentesting, Network Security, Info Sec",
       description: "Securing systems through offensive and defensive security practices",
     },
     {
       icon: Code2,
       title: "WEB DEVELOPMENT",
-      tech: "HTML, CSS, React, Python, Flutter",
+      tech: "HTML, CSS, React, Python,",
       description: "Building responsive web applications and mobile experiences",
     },
     {
       icon: Network,
       title: "NETWORKING",
-      tech: "NOC Operations, Network Security, Infrastructure",
-      description: "Network operations and security with hands-on NOC experience",
+      tech: ", Network Security, Network Security Auditing",
+      description: "Network operations and security with hands-on Network auditing experience",
     },
     {
       icon: Users,
@@ -83,7 +83,7 @@ const About = () => {
           how things work—and how they can be broken—has grown into a passion for
           securing systems, building applications, and leading projects. Every solution
           I craft is intentional, whether it&apos;s protecting networks, developing
-          secure applications, or managing complex technical initiatives.
+          scripts to automate tasks, or managing complex technical initiatives.
         </p>
       </div>
 

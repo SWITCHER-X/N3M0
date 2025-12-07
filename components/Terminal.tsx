@@ -32,7 +32,7 @@ export const Terminal = ({ onClose }: TerminalProps) => {
   ]);
   const [commandHistory, setCommandHistory] = useState<string[]>([]);
   const [historyIndex, setHistoryIndex] = useState(-1);
-  const [currentPath, setCurrentPath] = useState("/home/bosco");
+  const [currentPath, setCurrentPath] = useState("/home/switcher");
   const [autocompleteSuggestions, setAutocompleteSuggestions] = useState<string[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
   const outputRef = useRef<HTMLDivElement>(null);
@@ -142,10 +142,10 @@ export const Terminal = ({ onClose }: TerminalProps) => {
             type: "info",
             content: [
               "total 8",
-              "drwxr-xr-x  2 bosco bosco  4096 Jan 2025  .",
-              "drwxr-xr-x  3 bosco bosco  4096 Jan 2025  ..",
-              "-rw-r--r--  1 bosco bosco   220 Jan 2025  .bashrc",
-              "-rw-r--r--  1 bosco bosco   220 Jan 2025  projects.txt",
+              "drwxr-xr-x  2 switcher switcher  4096 Jan 2025  .",
+              "drwxr-xr-x  3 switcher switcher  4096 Jan 2025  ..",
+              "-rw-r--r--  1 switcher switcher   220 Jan 2025  .bashrc",
+              "-rw-r--r--  1 switcher switcher   220 Jan 2025  projects.txt",
               "",
               "Projects:",
               "  [Coming soon...]"
@@ -167,8 +167,8 @@ export const Terminal = ({ onClose }: TerminalProps) => {
       case "cd":
         const targetDir = args[0];
         if (!targetDir || targetDir === "~" || targetDir === "/") {
-          setCurrentPath("/home/bosco");
-          addOutput({ type: "success", content: `Changed directory to /home/bosco` });
+          setCurrentPath("/home/switcher");
+          addOutput({ type: "success", content: `Changed directory to /home/switcher` });
         } else if (targetDir === "..") {
           const newPath = currentPath.split("/").slice(0, -1).join("/") || "/";
           setCurrentPath(newPath);
@@ -221,7 +221,7 @@ export const Terminal = ({ onClose }: TerminalProps) => {
         addOutput({
           type: "info",
           content: [
-            "System: bosco.dev",
+            "System: switcher.dev",
             "Kernel: Next.js 16.0.0",
             "Architecture: Web",
             "Hostname: localhost:404",

@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = "https://bosco.dev";
+  const baseUrl = "https://switcher.dev";
 
   return {
     rules: [

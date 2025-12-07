@@ -22,7 +22,7 @@ const Footer = () => {
             {/* About */}
             <div>
               <h3 className="font-bold text-lg pb-4 tracking-wide">
-                BOSCO.DEV
+                SWITCHER.DEV
               </h3>
               <p className="text-sm text-gray-400 leading-relaxed">
                 Building things. Breaking things. Fixing things. Repeat.
@@ -52,10 +52,10 @@ const Footer = () => {
 
           <div className="border-t border-gray-700 pt-6 sm:pt-8">
             <p className="text-xs text-gray-500 text-center sm:text-left mb-2">
-              © 2025 BOSCO.DEV - ALL RIGHTS RESERVED
+              © 2025 SWITCHER_X.DEV - ALL RIGHTS RESERVED
             </p>
             <p className="text-xs text-gray-500 text-center sm:text-left">
-              I was too lazy to build this or create a CV for years. <br /> Site template made by{" "}
+              I was too lazy to create a CV for years, so i took some inspiration . <br /> Site template made by{" "}
               <a
                 href="http://absterr.vercel.app"
                 target="_blank"

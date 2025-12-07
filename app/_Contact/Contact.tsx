@@ -1,5 +1,5 @@
 "use client";
-import { Copy, Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Copy, Github, Mail, MapPin, Phone } from "lucide-react";
 import { XIcon } from "@/components/XIcon";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { useEffect, useState, useRef } from "react";

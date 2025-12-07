@@ -1,5 +1,5 @@
 "use client";
-import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
+import { ChevronDown, Github, Mail } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { XIcon } from "@/components/XIcon";
@@ -18,7 +18,7 @@ const Hero = () => {
   const [displayedText, setDisplayedText] = useState("");
   const [showCursor, setShowCursor] = useState(true);
   const [isTyping, setIsTyping] = useState(true);
-  const [linkedinText, setLinkedinText] = useState<"icon" | "LOL">("icon");
+
 
   useEffect(() => {
     setIsTyping(true);
@@ -137,28 +137,7 @@ const Hero = () => {
         </div>
 
         <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 mb-10 sm:mb-12 md:mb-16">
-          {socials.map(({ url, label, icon: Icon, animate }, i) => {
-            if (animate && label === "LinkedIn") {
-              return (
-                <button
-                  key={i}
-                  onClick={() => {
-                    setLinkedinText("LOL");
-                    setTimeout(() => {
-                      setLinkedinText("icon");
-                    }, 1000);
-                  }}
-                  className="p-2 sm:p-3 border-2 rounded-full border-foreground/20 hover:border-foreground transition-colors duration-150 hover:bg-foreground hover:text-background min-w-[42px] min-h-[42px] flex items-center justify-center"
-                  aria-label={label}
-                >
-                  {linkedinText === "LOL" ? (
-                    <span className="text-xs sm:text-sm font-bold">LOL</span>
-                  ) : (
-                    <Icon size={18} className="sm:block" />
-                  )}
-                </button>
-              );
-            }
+          {socials.map(({ url, label, icon: Icon }, i) => {
             return (
               <a
                 key={i}
